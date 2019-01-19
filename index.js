@@ -65,4 +65,4 @@ class ECConsole {
 
 }
 
-module.exports = ECConsole;
+module.exports.ECConsole = ECConsole;
