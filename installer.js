@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const ANSIEscapeCodesPath = path.join(__dirname, 'assets', 'ANSIEscapeCodes.json');
-console.log('[ECConsole] - ANSIEscapeCodes.json found.');
+const ANSIEscapeCodesPath = './assets/ANSIEscapeCodes.json';
+console.log('[ECConsole] - ' + ANSIEscapeCodesPath + ' loading...');
 const ANSIEscapeCodesJSON = require(ANSIEscapeCodesPath);
-console.log('[ECConsole] - ANSIEscapeCodes.json loaded.');
-console.log('[ECConsole] - index.js building started...');
+console.log('[ECConsole] - ' + ANSIEscapeCodesPath + ' loaded.');
+console.log('[ECConsole] - Building started...');
 var indexJS = '';
 indexJS += '\n';
 indexJS += 'const ANSIEscapeCodes = {\n';
@@ -30,7 +30,8 @@ indexJS += '}\n';
 indexJS += '\n';
 indexJS += 'module.exports.ANSIEscapeCodes = ANSIEscapeCodes;\n';
 indexJS += 'module.exports.ECConsole = ECConsole;';
-console.log('[ECConsole] - index.js building completed.');
-console.log('[ECConsole] - index.js saving started...');
-fs.writeFileSync(path.join(__dirname, 'index.js'), indexJS, { encoding: 'utf8' });
-console.log('[ECConsole] - index.js saving completed.');
+console.log('[ECConsole] - Building completed.');
+var indexPath = './index.js';
+console.log('[ECConsole] - ' + indexPath + ' saving...');
+fs.writeFileSync(indexPath, indexJS, { encoding: 'utf8' });
+console.log('[ECConsole] - ' + indexPath + ' saved.');
