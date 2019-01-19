@@ -1,5 +1,5 @@
 
-const styles = {
+const ANSIEscapeCodes = {
     // OPTION
     reset: "\x1b[0m",
     bright: "\x1b[1m",
@@ -35,34 +35,35 @@ class ECConsole {
     }
 
     // OPTION
-    get reset() { return new ECConsole(styles.reset + this._text); };
-    get bright() { return new ECConsole(styles.bright + this._text); };
-    get dim() { return new ECConsole(styles.dim + this._text); };
-    get underscore() { return new ECConsole(styles.underscore + this._text); };
-    get blink() { return new ECConsole(styles.blink + this._text); };
-    get reverse() { return new ECConsole(styles.reverse + this._text); };
-    get hidden() { return new ECConsole(styles.hidden + this._text); };
+    get reset() { return new ECConsole(ANSIEscapeCodes.reset + this._text); };
+    get bright() { return new ECConsole(ANSIEscapeCodes.bright + this._text); };
+    get dim() { return new ECConsole(ANSIEscapeCodes.dim + this._text); };
+    get underscore() { return new ECConsole(ANSIEscapeCodes.underscore + this._text); };
+    get blink() { return new ECConsole(ANSIEscapeCodes.blink + this._text); };
+    get reverse() { return new ECConsole(ANSIEscapeCodes.reverse + this._text); };
+    get hidden() { return new ECConsole(ANSIEscapeCodes.hidden + this._text); };
     // FOREGROUNG
-    get fgBlack() { return new ECConsole(styles.fgBlack + this._text); };
-    get fgRed() { return new ECConsole(styles.fgRed + this._text); };
-    get fgGreen() { return new ECConsole(styles.fgGreen + this._text); };
-    get fgYellow() { return new ECConsole(styles.fgYellow + this._text); };
-    get fgBlue() { return new ECConsole(styles.fgBlue + this._text); };
-    get fgMagenta() { return new ECConsole(styles.fgMagenta + this._text); };
-    get fgCyan() { return new ECConsole(styles.fgCyan + this._text); };
-    get fgWhite() { return new ECConsole(styles.fgWhite + this._text); };
+    get fgBlack() { return new ECConsole(ANSIEscapeCodes.fgBlack + this._text); };
+    get fgRed() { return new ECConsole(ANSIEscapeCodes.fgRed + this._text); };
+    get fgGreen() { return new ECConsole(ANSIEscapeCodes.fgGreen + this._text); };
+    get fgYellow() { return new ECConsole(ANSIEscapeCodes.fgYellow + this._text); };
+    get fgBlue() { return new ECConsole(ANSIEscapeCodes.fgBlue + this._text); };
+    get fgMagenta() { return new ECConsole(ANSIEscapeCodes.fgMagenta + this._text); };
+    get fgCyan() { return new ECConsole(ANSIEscapeCodes.fgCyan + this._text); };
+    get fgWhite() { return new ECConsole(ANSIEscapeCodes.fgWhite + this._text); };
     // BACKGROUND
-    get bgBlack() { return new ECConsole(styles.bgBlack + this._text); };
-    get bgRed() { return new ECConsole(styles.bgRed + this._text); };
-    get bgGreen() { return new ECConsole(styles.bgGreen + this._text); };
-    get bgYellow() { return new ECConsole(styles.bgYellow + this._text); };
-    get bgBlue() { return new ECConsole(styles.bgBlue + this._text); };
-    get bgMagenta() { return new ECConsole(styles.bgMagenta + this._text); };
-    get bgCyan() { return new ECConsole(styles.bgCyan + this._text); };
-    get bgWhite() { return new ECConsole(styles.bgWhite + this._text); };
+    get bgBlack() { return new ECConsole(ANSIEscapeCodes.bgBlack + this._text); };
+    get bgRed() { return new ECConsole(ANSIEscapeCodes.bgRed + this._text); };
+    get bgGreen() { return new ECConsole(ANSIEscapeCodes.bgGreen + this._text); };
+    get bgYellow() { return new ECConsole(ANSIEscapeCodes.bgYellow + this._text); };
+    get bgBlue() { return new ECConsole(ANSIEscapeCodes.bgBlue + this._text); };
+    get bgMagenta() { return new ECConsole(ANSIEscapeCodes.bgMagenta + this._text); };
+    get bgCyan() { return new ECConsole(ANSIEscapeCodes.bgCyan + this._text); };
+    get bgWhite() { return new ECConsole(ANSIEscapeCodes.bgWhite + this._text); };
 
-    get set() { return this._text + styles.reset; };
+    get set() { return this._text + ANSIEscapeCodes.reset; };
 
 }
 
+module.exports.ANSIEscapeCodes = ANSIEscapeCodes;
 module.exports.ECConsole = ECConsole;
