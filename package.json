@@ -4,7 +4,7 @@
   "description": "Escape codes for node console",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node indexGenerator.js"
+    "preinstall": "node installer.js"
   },
   "repository": {
     "type": "git",
