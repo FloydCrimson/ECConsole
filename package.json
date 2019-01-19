@@ -4,7 +4,7 @@
   "description": "Escape codes for node console",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "node indexGenerator.js"
   },
   "repository": {
     "type": "git",
