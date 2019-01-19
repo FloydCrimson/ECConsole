@@ -61,6 +61,8 @@ class ECConsole {
     get bgCyan() { return new ECConsole(styles.bgCyan + this._text); };
     get bgWhite() { return new ECConsole(styles.bgWhite + this._text); };
 
+    get set() { return this._text + styles.reset; };
+
 }
 
 module.exports = ECConsole;
