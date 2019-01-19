@@ -2,9 +2,9 @@
 const ANSIEscapeCodes = {
     // OPTION
     reset: "\x1b[0m",
-    bright: "\x1b[1m",
+    bold: "\x1b[1m",
     dim: "\x1b[2m",
-    underscore: "\x1b[4m",
+    underline: "\x1b[4m",
     blink: "\x1b[5m",
     reverse: "\x1b[7m",
     hidden: "\x1b[8m",
@@ -25,7 +25,25 @@ const ANSIEscapeCodes = {
     bgBlue: "\x1b[44m",
     bgMagenta: "\x1b[45m",
     bgCyan: "\x1b[46m",
-    bgWhite: "\x1b[47m"
+    bgWhite: "\x1b[47m",
+    // FOREGROUNG BRIGHT
+    fgBlackBright: "\x1b[90m",
+    fgRedBright: "\x1b[91m",
+    fgGreenBright: "\x1b[92m",
+    fgYellowBright: "\x1b[93m",
+    fgBlueBright: "\x1b[94m",
+    fgMagentaBright: "\x1b[95m",
+    fgCyanBright: "\x1b[96m",
+    fgWhiteBright: "\x1b[97m",
+    // BACKGROUND BRIGHT
+    bgBlackBright: "\x1b[100m",
+    bgRedBright: "\x1b[101m",
+    bgGreenBright: "\x1b[102m",
+    bgYellowBright: "\x1b[103m",
+    bgBlueBright: "\x1b[104m",
+    bgMagentaBright: "\x1b[105m",
+    bgCyanBright: "\x1b[106m",
+    bgWhiteBright: "\x1b[107m",
 };
 
 class ECConsole {
@@ -36,9 +54,9 @@ class ECConsole {
 
     // OPTION
     get reset() { return new ECConsole(ANSIEscapeCodes.reset + this._text); };
-    get bright() { return new ECConsole(ANSIEscapeCodes.bright + this._text); };
+    get bold() { return new ECConsole(ANSIEscapeCodes.bold + this._text); };
     get dim() { return new ECConsole(ANSIEscapeCodes.dim + this._text); };
-    get underscore() { return new ECConsole(ANSIEscapeCodes.underscore + this._text); };
+    get underline() { return new ECConsole(ANSIEscapeCodes.underline + this._text); };
     get blink() { return new ECConsole(ANSIEscapeCodes.blink + this._text); };
     get reverse() { return new ECConsole(ANSIEscapeCodes.reverse + this._text); };
     get hidden() { return new ECConsole(ANSIEscapeCodes.hidden + this._text); };
@@ -60,6 +78,24 @@ class ECConsole {
     get bgMagenta() { return new ECConsole(ANSIEscapeCodes.bgMagenta + this._text); };
     get bgCyan() { return new ECConsole(ANSIEscapeCodes.bgCyan + this._text); };
     get bgWhite() { return new ECConsole(ANSIEscapeCodes.bgWhite + this._text); };
+    // FOREGROUNG BRIGHT
+    get fgBlackBright() { return new ECConsole(ANSIEscapeCodes.fgBlackBright + this._text); };
+    get fgRedBright() { return new ECConsole(ANSIEscapeCodes.fgRedBright + this._text); };
+    get fgGreenBright() { return new ECConsole(ANSIEscapeCodes.fgGreenBright + this._text); };
+    get fgYellowBright() { return new ECConsole(ANSIEscapeCodes.fgYellowBright + this._text); };
+    get fgBlueBright() { return new ECConsole(ANSIEscapeCodes.fgBlueBright + this._text); };
+    get fgMagentaBright() { return new ECConsole(ANSIEscapeCodes.fgMagentaBright + this._text); };
+    get fgCyanBright() { return new ECConsole(ANSIEscapeCodes.fgCyanBright + this._text); };
+    get fgWhiteBright() { return new ECConsole(ANSIEscapeCodes.fgWhiteBright + this._text); };
+    // BACKGROUND BRIGHT
+    get bgBlackBright() { return new ECConsole(ANSIEscapeCodes.bgBlackBright + this._text); };
+    get bgRedBright() { return new ECConsole(ANSIEscapeCodes.bgRedBright + this._text); };
+    get bgGreenBright() { return new ECConsole(ANSIEscapeCodes.bgGreenBright + this._text); };
+    get bgYellowBright() { return new ECConsole(ANSIEscapeCodes.bgYellowBright + this._text); };
+    get bgBlueBright() { return new ECConsole(ANSIEscapeCodes.bgBlueBright + this._text); };
+    get bgMagentaBright() { return new ECConsole(ANSIEscapeCodes.bgMagentaBright + this._text); };
+    get bgCyanBright() { return new ECConsole(ANSIEscapeCodes.bgCyanBright + this._text); };
+    get bgWhiteBright() { return new ECConsole(ANSIEscapeCodes.bgWhiteBright + this._text); };
 
     get set() { return this._text + ANSIEscapeCodes.reset; };
 
